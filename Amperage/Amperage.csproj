@@ -16,6 +16,14 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+<PropertyGroup>
+  <!-- 添加这行禁用ClickOnce -->
+  <GenerateClickOnceManifests>false</GenerateClickOnceManifests>
+  
+  <!-- 已有配置保持不变 -->
+  <OutputType>WinExe</OutputType>
+  <TargetFramework>net8.0-windows</TargetFramework>
+</PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\ARM64\Debug\</OutputPath>
