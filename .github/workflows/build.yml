@@ -8,7 +8,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '7.0.x'
       - name: Build
         run: dotnet publish AmperageKit.sln -c Release --self-contained=false -o output
       - name: Upload Workloads
