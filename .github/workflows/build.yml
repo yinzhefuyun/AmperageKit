@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore AmperageKit.sln
 
       - name: Build
-        run: dotnet publish AmperageKit.sln -c Release -p:GenerateClickOnceManifests=false
+        run: dotnet publish AmperageKit.sln -c Release -p:PublishDir=./publish
 
       - name: Show output
         run: dir output
