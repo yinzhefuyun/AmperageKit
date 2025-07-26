@@ -19,7 +19,7 @@
 <PropertyGroup>
   <!-- 添加这行禁用ClickOnce -->
   <GenerateClickOnceManifests>false</GenerateClickOnceManifests>
-  
+  <IsClickOnceManifest>false</IsClickOnceManifest>
   <!-- 已有配置保持不变 -->
   <OutputType>WinExe</OutputType>
   <TargetFramework>net8.0-windows</TargetFramework>
