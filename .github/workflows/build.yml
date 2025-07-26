@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore AmperageKit.sln
 
       - name: Build (win10-x64)
-        run: dotnet publish AmperageKit.sln -c Release  --self-contained false -o output
+        run: dotnet publish AmperageKit.sln -c Release  --self-contained false -p:GenerateManifests=false
 
       - name: Show output
         run: dir output
