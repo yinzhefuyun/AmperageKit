@@ -31,7 +31,7 @@ jobs:
         run: Compress-Archive -Path output\* -DestinationPath Amperage_x86.zip
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: amperage-x86
           path: Amperage_x86.zip
