@@ -13,16 +13,16 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup .NET 7
-        uses: actions/setup-dotnet@v3
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@main
         with:
-          dotnet-version: '7.0.x'
+          dotnet-version: '9.0.x'
 
       - name: Restore dependencies
         run: dotnet restore AmperageKit.sln
 
-      - name: Build (win10-x64)
-        run: dotnet publish AmperageKit.sln -c Release  --self-contained false -p:GenerateManifests=false
+      - name: Build
+        run: dotnet publish AmperageKit.sln -c Release 
 
       - name: Show output
         run: dir output
@@ -33,5 +33,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@main
         with:
-          name: amperage-x86
-          path: Amperage_x86.zip
+          name: amperage
+          path: Amperage.zip
